@@ -1,0 +1,60 @@
+.stockBar {
+  display: flex;
+  padding: 10px;
+  background-color: #000000;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  padding: 0;
+  left: 0;
+  justify-content: right;
+  gap: 10px;
+  z-index: 9999;
+}
+
+section {
+  display: flex; 
+  gap: 10px; 
+}
+
+#infoBox {
+  opacity: 0;
+  display: block; 
+  height: auto;  
+  background-color: black;
+  animation: moveBox1 23s linear infinite;
+  animation-delay: 0.5s;
+  color: white;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+#box1, #box2, #box3, #box4 {
+  opacity: 0;
+  display: block; 
+  height: auto;  
+  background-color: black;
+  animation: moveBox1 23s linear infinite;
+  color: white;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+#box1 { animation-delay: 1.5s; }
+#box2 { animation-delay: 3s; }
+#box3 { animation-delay: 4.5s; }
+#box4 { animation-delay: 6s; }
+
+@keyframes moveBox1 {
+  0% {
+      transform: translateX(30vw); 
+      opacity: 0; 
+  }
+  10% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(-100vw);
+  }
+} 
